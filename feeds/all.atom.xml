@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>cty's blog</title><link href="http://cty12.github.io/" rel="alternate"></link><link href="http://cty12.github.io/feeds/all.atom.xml" rel="self"></link><id>http://cty12.github.io/</id><updated>2014-06-30T00:00:00+02:00</updated><entry><title>Hello Pelican!</title><link href="http://cty12.github.io/hello_pelican.html" rel="alternate"></link><updated>2014-06-30T00:00:00+02:00</updated><author><name>cty</name></author><id>tag:cty12.github.io,2014-06-30:hello_pelican.html</id><summary type="html">&lt;h1&gt;This is my first blog post using pelican.&lt;/h1&gt;
+&lt;p&gt;Hosted on Github, this blog is empowered by pelican and created using Markdown.&lt;/p&gt;
+&lt;p&gt;I like python.&lt;/p&gt;
+&lt;p&gt;Hello pelican!&lt;/p&gt;</summary><category term="hello"></category></entry></feed>
