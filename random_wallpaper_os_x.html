@@ -125,7 +125,7 @@
 <hr />
 <ul>
 <li>
-<p>首先你得有一只 Mac 娘，无论是 MacBook 还是 iMac 都无所谓。我用的是 MacBook Pro late 2013 。</p>
+<p>首先你得有一只 Mac 娘，无论是 MacBook 还是 iMac 都无所谓。当然如果你用 Linux 的话原理也差不多（<strong>不过你都用 Linux 咯还要看这篇文干什么！</strong>）。我用的是 MacBook Pro late 2013 。</p>
 </li>
 <li>
 <p>其次她得装有 python ，我用的是 2.7.5 。不过请你不用担心 Mac 娘通常情况下都会自带这个版本（也许是更老版本的）的 python 。</p>
@@ -140,11 +140,13 @@
 <p>我的壁纸通常是存在 <code>~/Pictures/wallpapers</code> 这个路径下。如果你的壁纸不在这里，请替换 <strong>file_dir</strong> 。</p>
 <div class="highlight"><pre><span class="c">#! /usr/bin/env python</span>
 <span class="c"># -*- coding: utf-8 -*-</span>
-<span class="c"># 将壁纸随机设置为</span>
+<span class="c"># 将壁纸随机设置</span>
 
 <span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">getpass</span><span class="o">,</span> <span class="nn">random</span><span class="o">,</span> <span class="nn">subprocess</span>
 
 <span class="n">file_dir</span> <span class="o">=</span> <span class="s">&#39;/Users/&#39;</span> <span class="o">+</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s">&#39;/Pictures/wallpapers&#39;</span>
+<span class="c"># 如果想使用系统 in stock 的壁纸请使用这个路径：</span>
+<span class="c"># file_dir = &#39;/Library/Desktop Pictures&#39;</span>
 
 <span class="nb">file</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -228,13 +230,8 @@ sudo chmod u+x rand_wallpaper
 
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
 <li class="tag-4">
-    <a href="http://cty12.github.io/tag/python.html">
-        <i class="icon-tag icon-large"></i>python
-    </a>
-</li>
-<li class="tag-4">
-    <a href="http://cty12.github.io/tag/hello.html">
-        <i class="icon-tag icon-large"></i>hello
+    <a href="http://cty12.github.io/tag/mac.html">
+        <i class="icon-tag icon-large"></i>Mac
     </a>
 </li>
 <li class="tag-4">
@@ -243,8 +240,13 @@ sudo chmod u+x rand_wallpaper
     </a>
 </li>
 <li class="tag-4">
-    <a href="http://cty12.github.io/tag/mac.html">
-        <i class="icon-tag icon-large"></i>Mac
+    <a href="http://cty12.github.io/tag/hello.html">
+        <i class="icon-tag icon-large"></i>hello
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://cty12.github.io/tag/python.html">
+        <i class="icon-tag icon-large"></i>python
     </a>
 </li>
 
