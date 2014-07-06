@@ -150,96 +150,88 @@
 
 <p>获得天气图标（我用的是 Emoji 因为不想找图片……图示上是雾天找不到 Emoji 所以就写个雾有点<strong>对不起观众</strong>）。你肯定想问这个表怎么打出来的，这跟 <strong>Yahoo 天气</strong>的天气编码有关系你需要自己查一下。</p>
 <p>顺便说一句我住北京，如果你住别处请改一下<strong>城市代码</strong>。</p>
-<div class="highlight"><pre>python &lt;&lt;EOF
-</pre></div>
-
-
-<p></br></p>
-<div class="highlight"><pre><span class="p">:::</span> <span class="n">python</span>
-<span class="c"># coding: utf-8</span>
-<span class="kn">import</span> <span class="nn">urllib2</span>
-<span class="kn">from</span> <span class="nn">xml.etree</span> <span class="kn">import</span> <span class="n">ElementTree</span> <span class="k">as</span> <span class="n">ET</span>
+<div class="highlight"><pre><span class="n">python</span> <span class="o">&lt;&lt;</span><span class="n">EOF</span>
+<span class="cp"># coding: utf-8</span>
+<span class="n">import</span> <span class="n">urllib2</span>
+<span class="n">from</span> <span class="n">xml</span><span class="p">.</span><span class="n">etree</span> <span class="n">import</span> <span class="n">ElementTree</span> <span class="n">as</span> <span class="n">ET</span>
 
 <span class="n">icon_table</span> <span class="o">=</span> <span class="p">(</span>
-<span class="s">&#39;🌀&#39;</span><span class="p">,</span> 
-<span class="s">&#39;🌀&#39;</span><span class="p">,</span> 
-<span class="s">&#39;🌀&#39;</span><span class="p">,</span> 
-<span class="s">&#39;☔️&#39;</span><span class="p">,</span> 
-<span class="s">&#39;☔️&#39;</span><span class="p">,</span>
-<span class="s">&#39;❄️&#39;</span><span class="p">,</span>
-<span class="s">&#39;❄️&#39;</span><span class="p">,</span>
-<span class="s">&#39;❄️&#39;</span><span class="p">,</span>
-<span class="s">&#39;☔️&#39;</span><span class="p">,</span>
-<span class="s">&#39;☔️&#39;</span><span class="p">,</span>
-<span class="s">&#39;☔️&#39;</span><span class="p">,</span>
-<span class="s">&#39;☔️&#39;</span><span class="p">,</span>
-<span class="s">&#39;☔️&#39;</span><span class="p">,</span>
-<span class="s">&#39;❄️&#39;</span><span class="p">,</span>
-<span class="s">&#39;❄️&#39;</span><span class="p">,</span>
-<span class="s">&#39;❄️&#39;</span><span class="p">,</span>
-<span class="s">&#39;❄️&#39;</span><span class="p">,</span>
-<span class="s">&#39;❄️&#39;</span><span class="p">,</span>
-<span class="s">&#39;❄️&#39;</span><span class="p">,</span>
-<span class="s">&#39;风&#39;</span><span class="p">,</span>
-<span class="s">&#39;雾&#39;</span><span class="p">,</span>
-<span class="s">&#39;雾&#39;</span><span class="p">,</span>
-<span class="s">&#39;雾&#39;</span><span class="p">,</span>
-<span class="s">&#39;风&#39;</span><span class="p">,</span>
-<span class="s">&#39;风&#39;</span><span class="p">,</span>
-<span class="s">&#39;冷&#39;</span><span class="p">,</span>
-<span class="s">&#39;☁️&#39;</span><span class="p">,</span>
-<span class="s">&#39;☁️&#39;</span><span class="p">,</span>
-<span class="s">&#39;☁️&#39;</span><span class="p">,</span>
-<span class="s">&#39;☁️&#39;</span><span class="p">,</span>
-<span class="s">&#39;☁️&#39;</span><span class="p">,</span>
-<span class="s">&#39;☀️&#39;</span><span class="p">,</span>
-<span class="s">&#39;☀️&#39;</span><span class="p">,</span>
-<span class="s">&#39;☀️&#39;</span><span class="p">,</span>
-<span class="s">&#39;☀️&#39;</span><span class="p">,</span>
-<span class="s">&#39;❄️&#39;</span><span class="p">,</span>
-<span class="s">&#39;🌞&#39;</span><span class="p">,</span>
-<span class="s">&#39;🌂&#39;</span><span class="p">,</span>
-<span class="s">&#39;🌂&#39;</span><span class="p">,</span>
-<span class="s">&#39;☔️&#39;</span><span class="p">,</span>
-<span class="s">&#39;☔️&#39;</span><span class="p">,</span>
-<span class="s">&#39;❄️&#39;</span><span class="p">,</span>
-<span class="s">&#39;❄️&#39;</span><span class="p">,</span>
-<span class="s">&#39;❄️&#39;</span><span class="p">,</span>
-<span class="s">&#39;☁️&#39;</span><span class="p">,</span>
-<span class="s">&#39;🌂&#39;</span><span class="p">,</span>
-<span class="s">&#39;❄️&#39;</span><span class="p">,</span>
-<span class="s">&#39;🌂&#39;</span><span class="p">,</span>
-<span class="s">&#39;🔥&#39;</span><span class="p">,</span>
+<span class="err">&#39;🌀&#39;</span><span class="p">,</span> 
+<span class="err">&#39;🌀&#39;</span><span class="p">,</span> 
+<span class="err">&#39;🌀&#39;</span><span class="p">,</span> 
+<span class="err">&#39;☔️&#39;</span><span class="p">,</span> 
+<span class="err">&#39;☔️&#39;</span><span class="p">,</span>
+<span class="err">&#39;❄️&#39;</span><span class="p">,</span>
+<span class="err">&#39;❄️&#39;</span><span class="p">,</span>
+<span class="err">&#39;❄️&#39;</span><span class="p">,</span>
+<span class="err">&#39;☔️&#39;</span><span class="p">,</span>
+<span class="err">&#39;☔️&#39;</span><span class="p">,</span>
+<span class="err">&#39;☔️&#39;</span><span class="p">,</span>
+<span class="err">&#39;☔️&#39;</span><span class="p">,</span>
+<span class="err">&#39;☔️&#39;</span><span class="p">,</span>
+<span class="err">&#39;❄️&#39;</span><span class="p">,</span>
+<span class="err">&#39;❄️&#39;</span><span class="p">,</span>
+<span class="err">&#39;❄️&#39;</span><span class="p">,</span>
+<span class="err">&#39;❄️&#39;</span><span class="p">,</span>
+<span class="err">&#39;❄️&#39;</span><span class="p">,</span>
+<span class="err">&#39;❄️&#39;</span><span class="p">,</span>
+<span class="sc">&#39;风&#39;</span><span class="p">,</span>
+<span class="sc">&#39;雾&#39;</span><span class="p">,</span>
+<span class="sc">&#39;雾&#39;</span><span class="p">,</span>
+<span class="sc">&#39;雾&#39;</span><span class="p">,</span>
+<span class="sc">&#39;风&#39;</span><span class="p">,</span>
+<span class="sc">&#39;风&#39;</span><span class="p">,</span>
+<span class="sc">&#39;冷&#39;</span><span class="p">,</span>
+<span class="err">&#39;☁️&#39;</span><span class="p">,</span>
+<span class="err">&#39;☁️&#39;</span><span class="p">,</span>
+<span class="err">&#39;☁️&#39;</span><span class="p">,</span>
+<span class="err">&#39;☁️&#39;</span><span class="p">,</span>
+<span class="err">&#39;☁️&#39;</span><span class="p">,</span>
+<span class="err">&#39;☀️&#39;</span><span class="p">,</span>
+<span class="err">&#39;☀️&#39;</span><span class="p">,</span>
+<span class="err">&#39;☀️&#39;</span><span class="p">,</span>
+<span class="err">&#39;☀️&#39;</span><span class="p">,</span>
+<span class="err">&#39;❄️&#39;</span><span class="p">,</span>
+<span class="err">&#39;🌞&#39;</span><span class="p">,</span>
+<span class="err">&#39;🌂&#39;</span><span class="p">,</span>
+<span class="err">&#39;🌂&#39;</span><span class="p">,</span>
+<span class="err">&#39;☔️&#39;</span><span class="p">,</span>
+<span class="err">&#39;☔️&#39;</span><span class="p">,</span>
+<span class="err">&#39;❄️&#39;</span><span class="p">,</span>
+<span class="err">&#39;❄️&#39;</span><span class="p">,</span>
+<span class="err">&#39;❄️&#39;</span><span class="p">,</span>
+<span class="err">&#39;☁️&#39;</span><span class="p">,</span>
+<span class="err">&#39;🌂&#39;</span><span class="p">,</span>
+<span class="err">&#39;❄️&#39;</span><span class="p">,</span>
+<span class="err">&#39;🌂&#39;</span><span class="p">,</span>
+<span class="err">&#39;🔥&#39;</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="c">#shanghai, 2151849</span>
-<span class="c"># beijing, 2151330</span>
-<span class="c"># suzhou, 2137082</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s">&#39;http://weather.yahooapis.com/forecastrss?w=2151330&amp;u=c&#39;</span>
-<span class="c"># namespace</span>
-<span class="n">yweather</span> <span class="o">=</span> <span class="s">&#39;{http://xml.weather.yahoo.com/ns/rss/1.0}&#39;</span>
-<span class="n">geo</span> <span class="o">=</span> <span class="s">&#39;{http://www.w3.org/2003/01/geo/wgs84_pos#}&#39;</span>
+<span class="cp">#shanghai, 2151849</span>
+<span class="cp"># beijing, 2151330</span>
+<span class="cp"># suzhou, 2137082</span>
+<span class="n">url</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">http</span><span class="o">:</span><span class="c1">//weather.yahooapis.com/forecastrss?w=2151330&amp;u=c&#39;</span>
+<span class="cp"># namespace</span>
+<span class="n">yweather</span> <span class="o">=</span> <span class="err">&#39;</span><span class="p">{</span><span class="n">http</span><span class="o">:</span><span class="c1">//xml.weather.yahoo.com/ns/rss/1.0}&#39;</span>
+<span class="n">geo</span> <span class="o">=</span> <span class="err">&#39;</span><span class="p">{</span><span class="n">http</span><span class="o">:</span><span class="c1">//www.w3.org/2003/01/geo/wgs84_pos#}&#39;</span>
 
-<span class="c"># get weather data</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="cp"># get weather data</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">urllib2</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">).</span><span class="n">read</span><span class="p">()</span>
+<span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="p">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
 <span class="n">root</span> <span class="o">=</span> <span class="n">tree</span>
 
-<span class="n">channel</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#39;channel&#39;</span><span class="p">)</span>
+<span class="n">channel</span> <span class="o">=</span> <span class="n">root</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="err">&#39;</span><span class="n">channel</span><span class="err">&#39;</span><span class="p">)</span>
 
-<span class="n">item</span> <span class="o">=</span> <span class="n">channel</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#39;item&#39;</span><span class="p">)</span>
+<span class="n">item</span> <span class="o">=</span> <span class="n">channel</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="err">&#39;</span><span class="n">item</span><span class="err">&#39;</span><span class="p">)</span>
 
-<span class="n">current</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">yweather</span> <span class="o">+</span> <span class="s">&#39;condition&#39;</span><span class="p">)</span>
-<span class="n">condition</span> <span class="o">=</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">, </span><span class="si">%s</span><span class="s">℃&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">current</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s">&#39;text&#39;</span><span class="p">],</span> <span class="n">current</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s">&#39;temp&#39;</span><span class="p">])</span>
-<span class="n">icon</span> <span class="o">=</span> <span class="n">icon_table</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">current</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s">&#39;code&#39;</span><span class="p">])]</span>
+<span class="n">current</span> <span class="o">=</span> <span class="n">item</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">yweather</span> <span class="o">+</span> <span class="err">&#39;</span><span class="n">condition</span><span class="err">&#39;</span><span class="p">)</span>
+<span class="n">condition</span> <span class="o">=</span> <span class="err">&#39;</span><span class="o">%</span><span class="n">s</span><span class="p">,</span> <span class="o">%</span><span class="n">s</span><span class="err">℃&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">current</span><span class="p">.</span><span class="n">attrib</span><span class="p">[</span><span class="err">&#39;</span><span class="n">text</span><span class="err">&#39;</span><span class="p">],</span> <span class="n">current</span><span class="p">.</span><span class="n">attrib</span><span class="p">[</span><span class="err">&#39;</span><span class="n">temp</span><span class="err">&#39;</span><span class="p">])</span>
+<span class="n">icon</span> <span class="o">=</span> <span class="n">icon_table</span><span class="p">[</span><span class="kt">int</span><span class="p">(</span><span class="n">current</span><span class="p">.</span><span class="n">attrib</span><span class="p">[</span><span class="err">&#39;</span><span class="n">code</span><span class="err">&#39;</span><span class="p">])]</span>
 
-<span class="k">print</span> <span class="n">icon</span>
-</pre></div>
+<span class="n">print</span> <span class="n">icon</span>
 
-
-<p></br></p>
-<div class="highlight"><pre>EOF
+<span class="n">EOF</span>
 </pre></div>
 
 
@@ -293,18 +285,13 @@
 
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
 <li class="tag-4">
-    <a href="http://cty12.github.io/tag/comic.html">
-        <i class="icon-tag icon-large"></i>comic
-    </a>
-</li>
-<li class="tag-4">
     <a href="http://cty12.github.io/tag/wget.html">
         <i class="icon-tag icon-large"></i>wget
     </a>
 </li>
-<li class="tag-4">
-    <a href="http://cty12.github.io/tag/hello.html">
-        <i class="icon-tag icon-large"></i>hello
+<li class="tag-1">
+    <a href="http://cty12.github.io/tag/python.html">
+        <i class="icon-tag icon-large"></i>python
     </a>
 </li>
 <li class="tag-1">
@@ -317,14 +304,19 @@
         <i class="icon-tag icon-large"></i>Mac
     </a>
 </li>
-<li class="tag-1">
-    <a href="http://cty12.github.io/tag/python.html">
-        <i class="icon-tag icon-large"></i>python
+<li class="tag-4">
+    <a href="http://cty12.github.io/tag/hello.html">
+        <i class="icon-tag icon-large"></i>hello
     </a>
 </li>
 <li class="tag-4">
     <a href="http://cty12.github.io/tag/manga.html">
         <i class="icon-tag icon-large"></i>manga
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://cty12.github.io/tag/comic.html">
+        <i class="icon-tag icon-large"></i>comic
     </a>
 </li>
 
