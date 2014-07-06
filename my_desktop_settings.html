@@ -117,11 +117,130 @@
 	<a href="http://cty12.github.io/tag/mac.html"><i class="icon-tag"></i>Mac</a>
 	<a href="http://cty12.github.io/tag/os-x.html"><i class="icon-tag"></i>OS X</a>
 </footer><!-- /.post-info -->                </div>
-                <h2>效果</h2>
+                <h2>使用的软件</h2>
+<hr />
+<p><a href="http://projects.tynsoe.org/en/geektool/"><strong><em>Geektool</em></strong></a>. 它的主要用途就是把终端输出的结果投影到桌面上，然后可以设置刷新频率什么的，让你的桌面看上去比较碉堡。</p>
+<p>它是免费软件。你也可以使用 Homebrew 获得它。</p>
+<p><code>brew cask install geektool</code></p>
+<h2>几个 Geeklet</h2>
+<hr />
+<p>显示占用前 12 的进程（<strong>别问我为啥是前 12 ……</strong>）。</p>
+<div class="highlight"><pre>ps -amcwwwxo <span class="s2">&quot;command %mem %cpu&quot;</span> | grep -v grep | head -13
+</pre></div>
+
+
+<p>显示以太网 IP 和无线网络 IP （这与你的硬件有关，我的电脑是 Macbook Pro late 2013）。</p>
+<div class="highlight"><pre><span class="nv">myen0</span><span class="o">=</span><span class="sb">`</span>ifconfig en0 | grep <span class="s2">&quot;inet &quot;</span> | grep -v 127.0.0.1 | awk <span class="s1">&#39;{print $2}&#39;</span><span class="sb">`</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$myen0&quot;</span> !<span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="o">]</span>
+<span class="k">then</span>
+<span class="k">    </span><span class="nb">echo</span> <span class="s2">&quot;Wireless: $myen0&quot;</span>
+<span class="k">else</span>
+<span class="k">    </span><span class="nb">echo</span> <span class="s1">&#39;Wireless: \033[0;31;1mINACTIVE\033[0m&#39;</span>
+<span class="k">fi</span>
+
+<span class="nv">myen1</span><span class="o">=</span><span class="sb">`</span>ifconfig en4 | grep <span class="s2">&quot;inet &quot;</span> | grep -v 127.0.0.1 | awk <span class="s1">&#39;{print $2}&#39;</span><span class="sb">`</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$myen1&quot;</span> !<span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="o">]</span>
+<span class="k">then</span>
+<span class="k">    </span><span class="nb">echo</span> <span class="s2">&quot;Ethernet: $myen1&quot;</span>
+<span class="k">else</span>
+<span class="k">    </span><span class="nb">echo</span> <span class="s1">&#39;Ethernet: \033[0;31;1mINACTIVE\033[0m&#39;</span>
+<span class="k">fi</span>
+</pre></div>
+
+
+<p>获得天气图标（我用的是 Emoji 因为不想找图片……图示上是雾天找不到 Emoji 所以就写个雾有点<strong>对不起观众</strong>）。你肯定想问这个表怎么打出来的，这跟 <strong>Yahoo 天气</strong>的天气编码有关系你需要自己查一下。</p>
+<p>顺便说一句我住北京，如果你住别处请改一下<strong>城市代码</strong>。</p>
+<div class="highlight"><pre>python <span class="s">&lt;&lt;EOF</span>
+<span class="s">::: python</span>
+<span class="s"># coding: utf-8</span>
+<span class="s">import urllib2</span>
+<span class="s">from xml.etree import ElementTree as ET</span>
+
+<span class="s">icon_table = (</span>
+<span class="s">&#39;🌀&#39;, </span>
+<span class="s">&#39;🌀&#39;, </span>
+<span class="s">&#39;🌀&#39;, </span>
+<span class="s">&#39;☔️&#39;, </span>
+<span class="s">&#39;☔️&#39;,</span>
+<span class="s">&#39;❄️&#39;,</span>
+<span class="s">&#39;❄️&#39;,</span>
+<span class="s">&#39;❄️&#39;,</span>
+<span class="s">&#39;☔️&#39;,</span>
+<span class="s">&#39;☔️&#39;,</span>
+<span class="s">&#39;☔️&#39;,</span>
+<span class="s">&#39;☔️&#39;,</span>
+<span class="s">&#39;☔️&#39;,</span>
+<span class="s">&#39;❄️&#39;,</span>
+<span class="s">&#39;❄️&#39;,</span>
+<span class="s">&#39;❄️&#39;,</span>
+<span class="s">&#39;❄️&#39;,</span>
+<span class="s">&#39;❄️&#39;,</span>
+<span class="s">&#39;❄️&#39;,</span>
+<span class="s">&#39;风&#39;,</span>
+<span class="s">&#39;雾&#39;,</span>
+<span class="s">&#39;雾&#39;,</span>
+<span class="s">&#39;雾&#39;,</span>
+<span class="s">&#39;风&#39;,</span>
+<span class="s">&#39;风&#39;,</span>
+<span class="s">&#39;冷&#39;,</span>
+<span class="s">&#39;☁️&#39;,</span>
+<span class="s">&#39;☁️&#39;,</span>
+<span class="s">&#39;☁️&#39;,</span>
+<span class="s">&#39;☁️&#39;,</span>
+<span class="s">&#39;☁️&#39;,</span>
+<span class="s">&#39;☀️&#39;,</span>
+<span class="s">&#39;☀️&#39;,</span>
+<span class="s">&#39;☀️&#39;,</span>
+<span class="s">&#39;☀️&#39;,</span>
+<span class="s">&#39;❄️&#39;,</span>
+<span class="s">&#39;🌞&#39;,</span>
+<span class="s">&#39;🌂&#39;,</span>
+<span class="s">&#39;🌂&#39;,</span>
+<span class="s">&#39;☔️&#39;,</span>
+<span class="s">&#39;☔️&#39;,</span>
+<span class="s">&#39;❄️&#39;,</span>
+<span class="s">&#39;❄️&#39;,</span>
+<span class="s">&#39;❄️&#39;,</span>
+<span class="s">&#39;☁️&#39;,</span>
+<span class="s">&#39;🌂&#39;,</span>
+<span class="s">&#39;❄️&#39;,</span>
+<span class="s">&#39;🌂&#39;,</span>
+<span class="s">&#39;🔥&#39;,</span>
+<span class="s">)</span>
+
+<span class="s">#shanghai, 2151849</span>
+<span class="s"># beijing, 2151330</span>
+<span class="s"># suzhou, 2137082</span>
+<span class="s">url = &#39;http://weather.yahooapis.com/forecastrss?w=2151330&amp;u=c&#39;</span>
+<span class="s"># namespace</span>
+<span class="s">yweather = &#39;{http://xml.weather.yahoo.com/ns/rss/1.0}&#39;</span>
+<span class="s">geo = &#39;{http://www.w3.org/2003/01/geo/wgs84_pos#}&#39;</span>
+
+<span class="s"># get weather data</span>
+<span class="s">data = urllib2.urlopen(url).read()</span>
+<span class="s">tree = ET.fromstring(data)</span>
+
+<span class="s">root = tree</span>
+
+<span class="s">channel = root.find(&#39;channel&#39;)</span>
+
+<span class="s">item = channel.find(&#39;item&#39;)</span>
+
+<span class="s">current = item.find(yweather + &#39;condition&#39;)</span>
+<span class="s">condition = &#39;%s, %s℃&#39; % (current.attrib[&#39;text&#39;], current.attrib[&#39;temp&#39;])</span>
+<span class="s">icon = icon_table[int(current.attrib[&#39;code&#39;])]</span>
+
+<span class="s">print icon</span>
+<span class="s">:::sh</span>
+<span class="s">EOF</span>
+</pre></div>
+
+
+<h2>效果</h2>
 <hr />
 <!--![桌面截图0](./images/desktop0.png)-->
 
-<p><img src="./images/desktop0.png" alt="桌面截图0" width="800px"/></p>
+<p><img src="./images/desktop0.jpg" alt="桌面截图0"/></p>
                 </div><!-- /.entry-content -->
                 <div class="comments">
                 <h2>Comments !</h2>
@@ -166,14 +285,14 @@
 </li>
 
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
-<li class="tag-4">
-    <a href="http://cty12.github.io/tag/wget.html">
-        <i class="icon-tag icon-large"></i>wget
+<li class="tag-1">
+    <a href="http://cty12.github.io/tag/mac.html">
+        <i class="icon-tag icon-large"></i>Mac
     </a>
 </li>
 <li class="tag-4">
-    <a href="http://cty12.github.io/tag/comic.html">
-        <i class="icon-tag icon-large"></i>comic
+    <a href="http://cty12.github.io/tag/wget.html">
+        <i class="icon-tag icon-large"></i>wget
     </a>
 </li>
 <li class="tag-1">
@@ -182,13 +301,13 @@
     </a>
 </li>
 <li class="tag-4">
-    <a href="http://cty12.github.io/tag/hello.html">
-        <i class="icon-tag icon-large"></i>hello
+    <a href="http://cty12.github.io/tag/comic.html">
+        <i class="icon-tag icon-large"></i>comic
     </a>
 </li>
-<li class="tag-1">
-    <a href="http://cty12.github.io/tag/mac.html">
-        <i class="icon-tag icon-large"></i>Mac
+<li class="tag-4">
+    <a href="http://cty12.github.io/tag/hello.html">
+        <i class="icon-tag icon-large"></i>hello
     </a>
 </li>
 <li class="tag-1">

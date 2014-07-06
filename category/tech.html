@@ -140,11 +140,20 @@
 	<a href="http://cty12.github.io/tag/mac.html"><i class="icon-tag"></i>Mac</a>
 	<a href="http://cty12.github.io/tag/os-x.html"><i class="icon-tag"></i>OS X</a>
 </footer><!-- /.post-info --></div>
-                <div class="summary"><h2>效果</h2>
+                <div class="summary"><h2>使用的软件</h2>
 <hr />
-<!--![桌面截图0](./images/desktop0.png)-->
+<p><a href="http://projects.tynsoe.org/en/geektool/"><strong><em>Geektool</em></strong></a>. 它的主要用途就是把终端输出的结果投影到桌面上，然后可以设置刷新频率什么的，让你的桌面看上去比较碉堡。</p>
+<p>它是免费软件。你也可以使用 Homebrew 获得它。</p>
+<p><code>brew cask install geektool</code></p>
+<h2>几个 Geeklet</h2>
+<hr />
+<p>显示占用前 12 的进程（<strong>别问我为啥是前 12 ……</strong>）。</p>
+<div class="highlight"><pre>ps -amcwwwxo <span class="s2">&quot;command %mem %cpu&quot;</span> | grep -v grep | head -13
+</pre></div>
 
-<p><img src="./images/desktop0.png" alt="桌面截图0" width="800px"/></p>
+
+<p>显示以太网 IP 和无线网络 IP （这与你的硬件有关，我的电脑是 Macbook Pro late 2013）。</p>
+<div class="highlight"><pre><span class="nv">myen0</span><span class="o">=</span><span class="sb">`</span>ifconfig en0 | grep <span class="s2">&quot;inet &quot;</span> | grep -v 127.0.0 ...</pre></div>
                         <a class="btn primary xsmall" href="http://cty12.github.io/my_desktop_settings.html">more ...</a>
                 </div>
         </div>
@@ -214,14 +223,14 @@
 </li>
 
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
-<li class="tag-4">
-    <a href="http://cty12.github.io/tag/wget.html">
-        <i class="icon-tag icon-large"></i>wget
+<li class="tag-1">
+    <a href="http://cty12.github.io/tag/mac.html">
+        <i class="icon-tag icon-large"></i>Mac
     </a>
 </li>
 <li class="tag-4">
-    <a href="http://cty12.github.io/tag/comic.html">
-        <i class="icon-tag icon-large"></i>comic
+    <a href="http://cty12.github.io/tag/wget.html">
+        <i class="icon-tag icon-large"></i>wget
     </a>
 </li>
 <li class="tag-1">
@@ -230,13 +239,13 @@
     </a>
 </li>
 <li class="tag-4">
-    <a href="http://cty12.github.io/tag/hello.html">
-        <i class="icon-tag icon-large"></i>hello
+    <a href="http://cty12.github.io/tag/comic.html">
+        <i class="icon-tag icon-large"></i>comic
     </a>
 </li>
-<li class="tag-1">
-    <a href="http://cty12.github.io/tag/mac.html">
-        <i class="icon-tag icon-large"></i>Mac
+<li class="tag-4">
+    <a href="http://cty12.github.io/tag/hello.html">
+        <i class="icon-tag icon-large"></i>hello
     </a>
 </li>
 <li class="tag-1">
