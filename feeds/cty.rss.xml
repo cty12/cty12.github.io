@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>cty的专栏</title><link>http://cty12.github.io/</link><description></description><atom:link href="http://cty12.github.io/feeds/cty.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 20 Aug 2014 00:00:00 +0800</lastBuildDate><item><title>测试一下播放音乐！</title><link>http://cty12.github.io/music_test.html</link><description>&lt;h2&gt;感谢&lt;/h2&gt;
+&lt;p&gt;首先感谢 &lt;a href="http://miantiao.me/"&gt;面条大神&lt;/a&gt; 提供的&lt;strong&gt;虾米音乐&lt;/strong&gt;插件，具体的使用方法你可以在 &lt;a href="http://miantiao.me/a-xiami-html5-player.html"&gt;这里&lt;/a&gt; 找到。&lt;/p&gt;
+&lt;p&gt;其次要感谢&lt;strong&gt;虾米音乐&lt;/strong&gt;提供音乐素材。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;好了废话不多说，看看效果&lt;/h2&gt;
+&lt;p&gt;效果就这样：&lt;/p&gt;
+&lt;div&gt;
+&lt;iframe src="http://miantiao.jd-app.com/m163player/22742160" frameborder="0" scrolling="0" width="430" height="200" allowtransparency&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;h2&gt;怎么样这首歌挺好听的吧？&lt;/h2&gt;
+&lt;p&gt;通りを行きかう 人影もなく       也不见街道上有行人来来往往&lt;/br&gt;
+路地裏に响く 呼び声もない       也不闻深巷里有呼唤声声回响&lt;/br&gt;
+焚かれることない 冻えた炉辺      久未生火的僵冷的炉边啊&lt;/br&gt;
+闭ざされたままの 小さな扉       小小的门扉紧闭&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;歴史を刻んだ 石の壁も         镌刻着历史的石壁&lt;/br&gt;
+今は色あせ 形をなくし         如今也褪尽色泽变换了形貌&lt;/br&gt;
+草に覆われた 石畳には         杂草丛生的石板地啊&lt;/br&gt;
+砂埃だけが 游んでいる         漫漫的尘埃游弋&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;みんなはどこへ 行ったのだろう 大家，都去了哪里呢&lt;/br&gt;
+私が爱した あの人たちは            我爱的那些人们啊&lt;/br&gt;
+色のあせていく たそがれの中      在褪色的黄昏中&lt;/br&gt;
+私は一人 涙する                    我独自落泪&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;ひろがる田畑に 种は撒かれず      辽阔的田地无人播种&lt;/br&gt;
+名前を知らない 草が茂る            长势茂盛的是无名的草木&lt;/br&gt;
+営みの迹を 草木が隠し         草木遮掩了劳碌的痕迹啊&lt;/br&gt;
+実りの记忆も 远くになった       丰收的记忆也已经遥不可及&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;缮い続けても ほつれていく       不断弥救也挽回不了的破败&lt;/br&gt;
+辉きの消えた 私の世界         我的世界消失了光辉&lt;/br&gt;
+行く手を照らす 灯りもなしに      前方的路啊没有明灯照耀&lt;/br&gt;
+それでも歩みは 止められぬ       就算这样，走吧不能停下&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;これからどこへ 行くのだろう      从今以后，要往哪里去呢&lt;/br&gt;
+私の爱する あの人たちは            我爱的那些人们啊&lt;/br&gt;
+色のあせていく たそがれの中      在褪色的黄昏中&lt;/br&gt;
+私は一人 立ち尽くす              只剩我一人独立&lt;/br&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;不行一到晚上就&lt;strong&gt;中二病&lt;/strong&gt;爆发了……&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">cty</dc:creator><pubDate>Wed, 20 Aug 2014 00:00:00 +0800</pubDate><guid>tag:cty12.github.io,2014-08-20:music_test.html</guid><category>music</category><category>share</category></item><item><title>使用 wget 自动下载一本漫画</title><link>http://cty12.github.io/comic_download.html</link><description>&lt;h2&gt;目的&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;从&lt;em&gt; 178 漫画&lt;/em&gt;自动下载某一本特定的漫画。&lt;/p&gt;
+&lt;h2&gt;实现&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;使用 python 和 wget 。&lt;/p&gt;
+&lt;p&gt;OS X 并不默认提供 wget 但是我想大家都会装吧。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;wget -q http://img1.dmzj.com/g/&lt;/span&gt;&lt;span class="si"&gt;%E&lt;/span&gt;&lt;span class="s"&gt;6&lt;/span&gt;&lt;span class="si"&gt;%94%&lt;/span&gt;&lt;span class="s"&gt;BB&lt;/span&gt;&lt;span class="si"&gt;%E&lt;/span&gt;&lt;span class="s"&gt;5%A3%B3&lt;/span&gt;&lt;span class="si"&gt;%E&lt;/span&gt;&lt;span class="s"&gt;6%9C%BA&lt;/span&gt;&lt;span class="si"&gt;%E&lt;/span&gt;&lt;span class="s"&gt;5%8A%A8&lt;/span&gt;&lt;span class="si"&gt;%E&lt;/span&gt;&lt;span class="s"&gt;9&lt;/span&gt;&lt;span class="si"&gt;%98%&lt;/span&gt;&lt;span class="s"&gt;9F/vol_01/&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zfill&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;.jpg&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;downloading img &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zfill&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;ret&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;ret&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;2048&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;abort when downloading img &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zfill&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;装订&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;之后我还用 &lt;code&gt;imagemagick&lt;/code&gt; 将它们装订成 PDF ，这样比较方便放到 Kindle 上面看。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">cty</dc:creator><pubDate>Sun, 06 Jul 2014 00:00:00 +0800</pubDate><guid>tag:cty12.github.io,2014-07-06:comic_download.html</guid><category>manga</category><category>comic</category><category>wget</category><category>python</category></item><item><title>我的桌面设置</title><link>http://cty12.github.io/my_desktop_settings.html</link><description>&lt;h2&gt;使用的软件&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;a href="http://projects.tynsoe.org/en/geektool/"&gt;&lt;strong&gt;&lt;em&gt;Geektool&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;. 它的主要用途就是把终端输出的结果投影到桌面上，然后可以设置刷新频率什么的，让你的桌面看上去比较碉堡。&lt;/p&gt;
+&lt;p&gt;它是免费软件。你也可以使用 Homebrew 获得它。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;brew cask install geektool&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;几个 Geeklet&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;显示占用前 12 的进程（&lt;strong&gt;别问我为啥是前 12 ……&lt;/strong&gt;）。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;ps -amcwwwxo &lt;span class="s2"&gt;&amp;quot;command %mem %cpu&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; grep -v grep &lt;span class="p"&gt;|&lt;/span&gt; head -13
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;显示以太网 IP 和无线网络 IP （这与你的硬件有关，我的电脑是 Macbook Pro late 2013）。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;myen0&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;ifconfig en0 &lt;span class="p"&gt;|&lt;/span&gt; grep &lt;span class="s2"&gt;&amp;quot;inet &amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; grep -v 127.0.0.1 &lt;span class="p"&gt;|&lt;/span&gt; awk &lt;span class="s1"&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$myen0&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; !&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;then&lt;/span&gt;
+    &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Wireless: &lt;/span&gt;&lt;span class="nv"&gt;$myen0&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;
+    &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Wireless: \033[0;31;1mINACTIVE\033[0m&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;fi&lt;/span&gt;
+
+&lt;span class="nv"&gt;myen1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;ifconfig en4 &lt;span class="p"&gt;|&lt;/span&gt; grep &lt;span class="s2"&gt;&amp;quot;inet &amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; grep -v 127.0.0.1 &lt;span class="p"&gt;|&lt;/span&gt; awk &lt;span class="s1"&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$myen1&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; !&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;then&lt;/span&gt;
+    &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Ethernet: &lt;/span&gt;&lt;span class="nv"&gt;$myen1&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;
+    &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Ethernet: \033[0;31;1mINACTIVE\033[0m&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;获得天气图标（我用的是 Emoji 因为不想找图片……图示上是雾天找不到 Emoji 所以就写个雾有点&lt;strong&gt;对不起观众&lt;/strong&gt;）。你肯定想问这个表怎么打出来的，这跟 &lt;strong&gt;Yahoo 天气&lt;/strong&gt;的天气编码有关系你需要自己查一下。&lt;/p&gt;
+&lt;p&gt;顺便说一句我住北京，如果你住别处请改一下&lt;strong&gt;城市代码&lt;/strong&gt;。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# coding: utf-8&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib2&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;xml.etree&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;ElementTree&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;ET&lt;/span&gt;
+
+&lt;span class="n"&gt;icon_table&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;🌀&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
+&lt;span class="s"&gt;&amp;#39;🌀&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
+&lt;span class="s"&gt;&amp;#39;🌀&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
+&lt;span class="s"&gt;&amp;#39;☔️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
+&lt;span class="s"&gt;&amp;#39;☔️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;❄️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;❄️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;❄️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;☔️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;☔️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;☔️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;☔️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;☔️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;❄️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;❄️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;❄️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;❄️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;❄️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;❄️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;风&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;雾&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;雾&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;雾&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;风&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;风&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;冷&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;☁️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;☁️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;☁️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;☁️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;☁️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;☀️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;☀️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;☀️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;☀️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;❄️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;🌞&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;🌂&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;🌂&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;☔️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;☔️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;❄️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;❄️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;❄️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;☁️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;🌂&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;❄️&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;🌂&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;🔥&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;#shanghai, 2151849&lt;/span&gt;
+&lt;span class="c"&gt;# beijing, 2151330&lt;/span&gt;
+&lt;span class="c"&gt;# suzhou, 2137082&lt;/span&gt;
+&lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;http://weather.yahooapis.com/forecastrss?w=2151330&amp;amp;u=c&amp;#39;&lt;/span&gt;
+&lt;span class="c"&gt;# namespace&lt;/span&gt;
+&lt;span class="n"&gt;yweather&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;{http://xml.weather.yahoo.com/ns/rss/1.0}&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;geo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;{http://www.w3.org/2003/01/geo/wgs84_pos#}&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;# get weather data&lt;/span&gt;
+&lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;tree&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ET&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fromstring&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tree&lt;/span&gt;
+
+&lt;span class="n"&gt;channel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;channel&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;channel&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;item&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;current&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;yweather&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;condition&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;condition&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;, &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;℃&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;attrib&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;text&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;attrib&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;temp&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;icon&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;icon_table&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;attrib&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;code&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])]&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;icon&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;效果&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;!--![桌面截图0](./images/desktop0.png)--&gt;
+
+&lt;p&gt;&lt;img src="./images/desktop0.jpg" alt="桌面截图0"/&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">cty</dc:creator><pubDate>Sun, 06 Jul 2014 00:00:00 +0800</pubDate><guid>tag:cty12.github.io,2014-07-06:my_desktop_settings.html</guid><category>Mac</category><category>OS X</category></item><item><title>OS X 自动更改壁纸</title><link>http://cty12.github.io/random_wallpaper_os_x.html</link><description>&lt;p&gt;&lt;img src="./images/mac_girl.jpg" alt="Mac娘" width=800px /&gt;&lt;/p&gt;
+&lt;p&gt;[感谢大淀久明 @pixiv.net 提供 Mac 娘]&lt;/p&gt;
+&lt;h2&gt;前言&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;本人和很多同学一样，有选择恐惧症。比如在换壁纸的时候，我经常犹豫不决是换哪个壁纸比较好，所以我就写了一个简单的 python 脚本来“替”我选择。&lt;/p&gt;
+&lt;h2&gt;用到的工具&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;首先你得有一只 Mac 娘，无论是 MacBook 还是 iMac 都无所谓。当然如果你用 Linux 的话原理也差不多（&lt;strong&gt;不过你都用 Linux 咯还要看这篇文干什么！&lt;/strong&gt;）。我用的是 MacBook Pro late 2013 。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;其次她得装有 python ，我用的是 2.7.5 。不过请你不用担心 Mac 娘通常情况下都会自带这个版本（也许是更老版本的）的 python 。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;以后我们也许会用到 Geektool ，那是一个桌面增强软件，其效果跟 Linux 上的一个我忘记叫什么名字的差不多。你可以免费获得它，我的方法是通过 Homebrew ，那是一个很好用的包管理器。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;实现&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;我们使用 python 实现，当然你也可以使用其它的方式本质上没什么区别。换壁纸是用的一段 AppleScript 脚本。&lt;/p&gt;
+&lt;p&gt;我的壁纸通常是存在 &lt;code&gt;~/Pictures/wallpapers&lt;/code&gt; 这个路径下。如果你的壁纸不在这里，请替换 &lt;strong&gt;file_dir&lt;/strong&gt; 。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#! /usr/bin/env python&lt;/span&gt;
+&lt;span class="c"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
+&lt;span class="c"&gt;# 将壁纸随机设置&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nn"&gt;getpass&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nn"&gt;subprocess&lt;/span&gt;
+
+&lt;span class="n"&gt;file_dir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/Users/&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;getpass&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getuser&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/Pictures/wallpapers&amp;#39;&lt;/span&gt;
+&lt;span class="c"&gt;# 如果想使用系统 in stock 的壁纸请使用这个路径：&lt;/span&gt;
+&lt;span class="c"&gt;# file_dir = &amp;#39;/Library/Desktop Pictures&amp;#39;&lt;/span&gt;
+
+&lt;span class="nb"&gt;file&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;walk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;file_dir&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;.&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="nb"&gt;file&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# debug info&lt;/span&gt;
+&lt;span class="n"&gt;cnt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;file&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cnt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\t&lt;/span&gt;&lt;span class="s"&gt; -- &lt;/span&gt;&lt;span class="se"&gt;\t&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;
+    &lt;span class="n"&gt;cnt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cnt&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+&lt;span class="n"&gt;file_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;file_dir&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nb"&gt;file&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;randint&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;file&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
+
+&lt;span class="n"&gt;SCRIPT&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&amp;quot;/usr/bin/osascript&amp;lt;&amp;lt;END&lt;/span&gt;
+&lt;span class="s"&gt;tell application &amp;quot;Finder&amp;quot;&lt;/span&gt;
+&lt;span class="s"&gt;set desktop picture to POSIX file &amp;quot;&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;
+&lt;span class="s"&gt;end tell&lt;/span&gt;
+&lt;span class="s"&gt;END&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;set_wallpaper&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;file_name&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;subprocess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Popen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SCRIPT&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;file_name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;set_wallpaper&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;file_name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;好了，现在我们新建一个文本文件把它存进去，修改权限变成一个Unix可执行文件：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;touch rand_wallpaper
+nano rand_wallpaper
+sudo chmod u+x rand_wallpaper
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;实现效果&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;大功告成！每次你运行这个程序就可以得到一张随机的壁纸啦。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">cty</dc:creator><pubDate>Sat, 05 Jul 2014 00:00:00 +0800</pubDate><guid>tag:cty12.github.io,2014-07-05:random_wallpaper_os_x.html</guid><category>Mac</category><category>OS X</category><category>python</category></item><item><title>Hello Pelican!</title><link>http://cty12.github.io/hello_pelican.html</link><description>&lt;h2&gt;This is my first blog post.&lt;/h2&gt;
+&lt;p&gt;Hosted on &lt;em&gt;Github&lt;/em&gt;, this blog is empowered by &lt;em&gt;Pelican&lt;/em&gt; and created using &lt;em&gt;Markdown&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The following is some tests. &lt;/p&gt;
+&lt;p&gt;The quick brown fox jumps over the lazy dog. &lt;/p&gt;
+&lt;p&gt;我能吞下玻璃而不伤害身体。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;Hello World! &amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Cheers!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">cty</dc:creator><pubDate>Mon, 30 Jun 2014 00:00:00 +0800</pubDate><guid>tag:cty12.github.io,2014-06-30:hello_pelican.html</guid><category>hello</category></item></channel></rss>

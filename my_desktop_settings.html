@@ -110,7 +110,7 @@
                 <div class="well">
 <footer class="post-info">
 <span class="label">Date</span>
-<abbr class="published" title="2014-07-06T00:00:00">
+<abbr class="published" title="2014-07-06T00:00:00+08:00">
         <i class="icon-calendar"></i>日 06 七月 2014
 </abbr>
 <span class="label">By</span>
@@ -131,25 +131,25 @@
 <h2>几个 Geeklet</h2>
 <hr />
 <p>显示占用前 12 的进程（<strong>别问我为啥是前 12 ……</strong>）。</p>
-<div class="highlight"><pre>ps -amcwwwxo <span class="s2">&quot;command %mem %cpu&quot;</span> | grep -v grep | head -13
+<div class="highlight"><pre>ps -amcwwwxo <span class="s2">&quot;command %mem %cpu&quot;</span> <span class="p">|</span> grep -v grep <span class="p">|</span> head -13
 </pre></div>
 
 
 <p>显示以太网 IP 和无线网络 IP （这与你的硬件有关，我的电脑是 Macbook Pro late 2013）。</p>
-<div class="highlight"><pre><span class="nv">myen0</span><span class="o">=</span><span class="sb">`</span>ifconfig en0 | grep <span class="s2">&quot;inet &quot;</span> | grep -v 127.0.0.1 | awk <span class="s1">&#39;{print $2}&#39;</span><span class="sb">`</span>
-<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$myen0&quot;</span> !<span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="o">]</span>
+<div class="highlight"><pre><span class="nv">myen0</span><span class="o">=</span><span class="sb">`</span>ifconfig en0 <span class="p">|</span> grep <span class="s2">&quot;inet &quot;</span> <span class="p">|</span> grep -v 127.0.0.1 <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span><span class="sb">`</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$myen0</span><span class="s2">&quot;</span> !<span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="o">]</span>
 <span class="k">then</span>
-<span class="k">    </span><span class="nb">echo</span> <span class="s2">&quot;Wireless: $myen0&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Wireless: </span><span class="nv">$myen0</span><span class="s2">&quot;</span>
 <span class="k">else</span>
-<span class="k">    </span><span class="nb">echo</span> <span class="s1">&#39;Wireless: \033[0;31;1mINACTIVE\033[0m&#39;</span>
+    <span class="nb">echo</span> <span class="s1">&#39;Wireless: \033[0;31;1mINACTIVE\033[0m&#39;</span>
 <span class="k">fi</span>
 
-<span class="nv">myen1</span><span class="o">=</span><span class="sb">`</span>ifconfig en4 | grep <span class="s2">&quot;inet &quot;</span> | grep -v 127.0.0.1 | awk <span class="s1">&#39;{print $2}&#39;</span><span class="sb">`</span>
-<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$myen1&quot;</span> !<span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="o">]</span>
+<span class="nv">myen1</span><span class="o">=</span><span class="sb">`</span>ifconfig en4 <span class="p">|</span> grep <span class="s2">&quot;inet &quot;</span> <span class="p">|</span> grep -v 127.0.0.1 <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span><span class="sb">`</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$myen1</span><span class="s2">&quot;</span> !<span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="o">]</span>
 <span class="k">then</span>
-<span class="k">    </span><span class="nb">echo</span> <span class="s2">&quot;Ethernet: $myen1&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Ethernet: </span><span class="nv">$myen1</span><span class="s2">&quot;</span>
 <span class="k">else</span>
-<span class="k">    </span><span class="nb">echo</span> <span class="s1">&#39;Ethernet: \033[0;31;1mINACTIVE\033[0m&#39;</span>
+    <span class="nb">echo</span> <span class="s1">&#39;Ethernet: \033[0;31;1mINACTIVE\033[0m&#39;</span>
 <span class="k">fi</span>
 </pre></div>
 
@@ -292,19 +292,19 @@
 </li>
 
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
-<li class="tag-1">
-    <a href="http://cty12.github.io/tag/mac.html">
-        <i class="icon-tag icon-large"></i>Mac
-    </a>
-</li>
-<li class="tag-1">
-    <a href="http://cty12.github.io/tag/os-x.html">
-        <i class="icon-tag icon-large"></i>OS X
+<li class="tag-4">
+    <a href="http://cty12.github.io/tag/share.html">
+        <i class="icon-tag icon-large"></i>share
     </a>
 </li>
 <li class="tag-1">
     <a href="http://cty12.github.io/tag/python.html">
         <i class="icon-tag icon-large"></i>python
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://cty12.github.io/tag/comic.html">
+        <i class="icon-tag icon-large"></i>comic
     </a>
 </li>
 <li class="tag-4">
@@ -317,24 +317,24 @@
         <i class="icon-tag icon-large"></i>manga
     </a>
 </li>
-<li class="tag-4">
-    <a href="http://cty12.github.io/tag/share.html">
-        <i class="icon-tag icon-large"></i>share
+<li class="tag-1">
+    <a href="http://cty12.github.io/tag/mac.html">
+        <i class="icon-tag icon-large"></i>Mac
     </a>
 </li>
-<li class="tag-4">
-    <a href="http://cty12.github.io/tag/music.html">
-        <i class="icon-tag icon-large"></i>music
-    </a>
-</li>
-<li class="tag-4">
-    <a href="http://cty12.github.io/tag/comic.html">
-        <i class="icon-tag icon-large"></i>comic
+<li class="tag-1">
+    <a href="http://cty12.github.io/tag/os-x.html">
+        <i class="icon-tag icon-large"></i>OS X
     </a>
 </li>
 <li class="tag-4">
     <a href="http://cty12.github.io/tag/wget.html">
         <i class="icon-tag icon-large"></i>wget
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://cty12.github.io/tag/music.html">
+        <i class="icon-tag icon-large"></i>music
     </a>
 </li>
 
